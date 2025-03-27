@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script>
+            var student={
+                sno:1,
+                sname:"mahith",
+                fee:4500,
+                GetDiscount:function() {
+                    return this.fee-50;
+                }
+            }
+            console.log(student,student.sname,student.sno,student.GetDiscount())
+
+            function Product(pid,pname,price) {
+                this.Pid=pid;
+                this.Pname=pname;
+                this.Price = price;
+
+            }
+
+            function Customer(cid)
+            {
+                this.Cid=cid;
+                this.Products=[];
+            }
+
+            var p1= new Product(1,"laptop",45000);
+            var p2= new Product(2,"Desktop",2000);
+
+            var products= [];
+            products.push(p1);
+            products.push(p2);
+            products.push(new Product(3,"Iphone",54000));
+
+            // console.log(products);
+
+            for (var prod of products) {
+                console.log(prod.Pid,prod.Pname,prod.Price);
+            }
+
+            var customer1= new Customer(1001);
+            customer1.Products.push(p1);
+
+            var customer2= new Customer(1002);
+            customer2.Products.push(p2);
+
+            for(var prod of customer2.Products)
+            {
+                console.log(prod);
+            }
+
+            //console.log(p1.Pid,p1['Pid']);
+
+            var propname="Price";
+            //console.log(p1[propname]);
+
+            for (var key in p1)
+            {
+                console.log(key);
+                console.log(p1[key]);
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

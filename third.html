@@ -1,0 +1,109 @@
+<html>
+
+<head>
+	<script>
+		function showHello() {
+			alert("hello");
+		}
+		function getTags() {
+			var div = document.getElementById("container");
+			//div.innerHTML+= "<h1>Hello</h1>";
+			var t1 = document.createElement("input");
+			t1.type = "text";
+			div.appendChild(t1);
+
+			var btn = document.createElement("input");
+			btn.type = "button";
+			btn.value = "ok";
+			btn.onclick = showHello;
+			div.appendChild(btn);
+
+			var checkbox = document.createElement("input");
+			checkbox.type = "checkbox";
+			checkbox.onclick = function () {
+				console.log(checkbox.checked)
+			};
+			div.appendChild(checkbox);
+
+			var male = document.createElement("input");
+			male.type = "radio";
+			male.name = "gender";
+			male.value = "male";
+			div.appendChild(male);
+			var label = document.createElement("label");
+			label.htmlFor = "male"; // Associate label with radio button
+			label.innerText = "Male";
+			div.appendChild(label);
+
+			var female = document.createElement("input");
+			female.type = "radio";
+			female.name = "gender";
+			female.value = "female";
+			div.appendChild(female);
+			var label2 = document.createElement("label");
+			label2.htmlFor = "female"; // Associate label with radio button
+			label2.innerText = "Female";
+			div.appendChild(label2);
+
+			var select = document.createElement("select");
+			var opt1 = document.createElement("option");
+			opt1.text = "Java";
+			opt1.value = "1";
+
+			var opt2 = document.createElement("option");
+			opt2.text = "Javascript";
+			opt2.value = "2";
+
+			select.options.add(opt1);
+			select.options.add(opt2);
+			select.onchange = function () {
+				console.log(select.options[select.selectedIndex].text);
+			}
+			div.appendChild(select);
+
+			var table= document.createElement("table");
+			table.style.borderStyle="double";
+			var trow=table.insertRow();
+			var snocell= trow.insertCell();
+			var	snamecell = trow.insertCell();
+			var feecell= trow.insertCell();
+			var imgcell=trow.insertCell();
+
+			var img= document.createElement("img");
+			img.src = "nature.jpg";
+			img.style.width="50px";
+			img.style.height="50px";
+			imgcell.appendChild(img);
+
+			var snolink= document.createElement("a");
+			snolink.innerHTML="1";
+			snolink.href="#";
+			snolink.onclick=function() {
+				console.log(this.innerHTML);
+			}
+			snocell.appendChild(snolink);
+			snamecell.innerHTML="mahith";
+			feecell.innerHTML="5000";
+
+			 trow=table.insertRow();
+			 snocell= trow.insertCell();
+			snamecell = trow.insertCell();
+			 feecell= trow.insertCell();
+
+			snocell.innerHTML="2";
+			snamecell.innerHTML="ram";
+			feecell.innerHTML="50000";
+
+
+			div.appendChild(table);
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" onclick="getTags()">
+	<div id="container">
+	</div>
+</body>
+
+</html>

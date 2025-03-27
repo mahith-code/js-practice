@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+
+            //index based arrays
+            var x=[];
+            var y=[10,20,40,"mahith",78.65];
+
+            console.log(y);
+            x[0]=89;
+            x[1]=90;
+            x.push(91,92);
+
+            for(i=0;i<x.length;i++) {
+                console.log(x[i]);
+            }
+
+            for(var item of x) {
+                console.log(item);
+            }
+
+            //key based arrays
+
+            var keybased=[];
+            keybased[-1]=100;
+            keybased["one"]=1;
+            keybased[1.22]=1.22;
+
+            console.log(keybased);
+
+            for(var key in keybased) {
+                console.log(key,keybased[key]);
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
