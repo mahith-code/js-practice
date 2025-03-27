@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function displayImage() 
+            {
+                var uploadedfile=document.getElementById("uploadfile");
+                console.log(uploadedfile.files[0]);
+                var filereader= new FileReader();
+                filereader.readAsDataURL(uploadedfile.files[0]);
+
+                filereader.onload = function () 
+                {
+                    var base64img= filereader.result;
+                    var img= document.getElementById("image");
+                    img.src= filereader.result;
+                }
+
+               
+            }
+        </script>
+    </head>
+    <body>
+        <img src="" id="image" width="100px" height="100px">
+       <input type="file" id="uploadfile"> 
+       <input type="button" value="Show Image" onclick="displayImage()">
+    </body>
+</html>
