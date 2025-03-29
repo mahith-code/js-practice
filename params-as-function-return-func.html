@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      function sub(a, b) {
+        return a - b;
+      }
+      function mul(a, b) {
+        return a * b;
+      }
+
+      function calculate(a, b, operation) {
+        return operation(a, b);
+      }
+
+      var result = calculate(10, 5, mul);
+      console.log(result);
+
+      // function WhichOperation(operator) {
+      //     if(operator=="+")
+      //         return add;
+      //
+      //     else if(operator=="-")
+      //         return sub;
+      //
+      //     else if(operator=="*")
+      //         return mul;
+      //
+      // }
+      function WhichOperation(operator) {
+        if ((operator = "+")) return (x, y) => x + y;
+        else if ((operator = "-")) return (x, y) => x - y;
+        else if ((operator = "*")) return (x, y) => x * y;
+      }
+      var operation = WhichOperation("+");
+      console.log(typeof(operation));
+      var result = calculate(10, 5, operation);
+      console.log(result);
+
+      operation = (x, y) => x * y;
+      var result = calculate(4, 3, operation);
+      console.log(result);
+    </script>
+  </head>
+  <body></body>
+</html>

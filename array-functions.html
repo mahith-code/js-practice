@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            var x=[10,20,30,40,20];
+             var found=x.find((value,index,arr)=>value==20);
+             var found=x.findIndex((value,index,arr)=>value==20);
+             var found=x.findLast((value,index,arr)=>value==20);
+             var found=x.findLastIndex((value,index,arr)=>value==20);
+
+             var filteredvalues= x.filter((value,index,arr)=>value>20);
+             var shiftedValue=x.shift();//removes the value from starting index
+             console.log(shiftedValue);
+             console.log(x);
+             x.unshift(100,200);//adds new values to the beginning of array
+             console.log(x)
+             var slicedArray=x.slice(1,3);//starts from 1st postn and ends at 3rd positin, returns a new array with result
+             console.log(slicedArray);
+            console.log(x);
+             var splicedArray= x.splice(0,2,58,89,78);
+             console.log(x);
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
