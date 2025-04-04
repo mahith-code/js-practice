@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script>
+
+            function abc()
+            {
+                console.log('in abc' , this);
+            }
+            abc();
+            console.log(this);
+
+            function Employee(eno,ename)
+            {
+                this.eno=eno;
+                this.ename=ename;
+                this.display= function() {
+                    console.log('in display', this);
+                }
+            }
+
+            var e= new Employee(1,'mahith');
+            e.display();
+
+            var Person= {
+                display:function(city,country)
+                {
+                    console.log(this.name + ','+ this.salary +','+city+','+country);
+                }
+            }
+
+            let Person2= {
+                name:'mahith',
+                salary:200
+            }
+
+            Person.display.apply(Person2,["jgtl","india"]);
+
+            //call method will take as arguments seperate
+            //apply method will take as array
+
+            var func= Person.display.bind(Person2);
+            func('gmp','ktl')
+        </script>
+    </head>
+    <body>
+        <input type="button" id="btn" value="click">
+    </body>
+    <script>
+        var btn=document.getElementById('btn');
+        btn.onclick= function()
+        {
+            console.log('onclick',this);
+        }
+    </script>
+</html>

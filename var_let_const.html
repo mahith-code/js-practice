@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <script>
+
+            //redeclare and reassign variables declared with var
+//             var number = 50
+// console.log(number) // 50
+
+// var number = 100
+// console.log(number) // 100
+
+//hoisting var
+
+// console.log(number) // undefined
+
+// var number = 50
+
+// console.log(number) // 50
+
+// function print() {
+//   var square1 = number * number
+//   console.log(square1)
+
+//   var number = 50
+
+//   var square2 = number * number
+//   console.log(square2)
+// }
+
+// print()
+// NaN
+// 2500
+
+//let example
+// let number = 50
+
+// function print() {
+//   let square = number * number
+
+//   if (number < 60) {
+//     var largerNumber = 80
+//     let anotherLargerNumber = 100
+
+//     console.log(square)
+//   }
+
+//   console.log(largerNumber)
+//   console.log(anotherLargerNumber)
+// }
+
+// print()
+// // 2500
+// 80
+// ReferenceError: anotherLargerNumber is not defined
+
+// const employee={eid:1001,ename:"mahith"};
+
+// console.log(employee);
+
+// employee.ename="ravi"
+// console.log(employee);
+
+// employee={eid:1001,ename:"mahrrrith"};//won't allow for const to change. cannot re-assign 
+
+//hoisting in var, let, const
+
+// console.log(x);
+// var  x=100; //undefined
+
+// console.log(y);
+// let y=50;// Cannot access 'y' before initialization
+
+// console.log(z);
+// const z=89 // Cannot access 'z' before initialization
+
+const arr=[10,20,30,40];
+
+console.log(arr);
+
+arr[1]=89//we can change the value but not declaration of array(i.e cannot redeclare  )
+
+console.log(arr);
+      </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
